@@ -4,44 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bean Boutique</title>
-    <link rel="stylesheet" href="./styles/home.css">
-    <link rel="stylesheet" href="./styles/about.css">
-    <link rel="stylesheet" href="./styles/special_coffee.css">
-    <link rel="stylesheet" href="./styles/menu.css">
-    <link rel="stylesheet" href="./styles/subscription.css">
-    <link rel="stylesheet" href="./styles/footer.css">
+    <link rel="stylesheet" href="/styles.css">
 </head>
 <body class="container">
-    <nav id="nav-bar" class="nav-bar">
-        <img class="logo" src="./images/logo.png" alt="logo">
-        <div class="nav-btn-gp">
-            <a href="#home" class="nav-btn">Home</a>
-            <a href="#about" class="nav-btn">About us</a>
-            <a href="#special-coffee" class="nav-btn">Coffee</a>
-            <a href="#menu" class="nav-btn">Menu</a>
-            <a href="#footer" class="nav-btn">Contact us</a>
-        </div>
-        <a href="/cart.html" class="cart-btn">
-            <i class="fa-solid fa-cart-shopping"></i>
-            <span class="badge">0</span>
-        </a>
-
-        <button class="hamburger" id="hamburger">
-            <i class="fa fa-bars"></i>
-        </button>
-    </nav>
+    <div id="navbar" class="nav-bar"></div>
 
     <section id="home" class="home">
         <div class="home-left">
             <h1 class="header">Bean Boutique</h1>
 
             <p class="description">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat voluptates nobis alias excepturi laborum provident nihil! Corrupti maxime impedit dicta, Corrupti maxime impedit dicta!
+                Bean Boutique is a cozy coffee shop that serves high-quality, freshly brewed coffee made from ethically sourced beans. Whether you’re in the mood for a rich espresso or a smooth latte, we offer a welcoming space to relax and enjoy your favorite drink.
             </p>
 
             <div class="home-btn-gp">
                 <button class="home-btn order-btn">Order Now</button>
-                <button class="home-btn about-btn">About Shop</button>
+                <button class="home-btn about-btn" onclick="window.location.href='/pages/about.html'">About Shop</button>
             </div>
         </div>
 
@@ -50,192 +28,9 @@
         </div>
     </section>
 
-    <section id="about" class="about">
-        <div class="about-box1">
-            <div class="about-card">
-                <button class="about-card-btn">
-                    <i class="fa-solid fa-mug-hot"></i>
-                </button>
+    <div id="footer"></div>
 
-                <h3 class="about-card-header">AWESOME AROMA</h3>
-
-                <p class="about-card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, magni.</p>
-            </div>
-
-            <div class="about-card">
-                <button class="about-card-btn">
-                    <i class="fa-solid fa-medal"></i>
-                </button>
-
-                <h3 class="about-card-header">HIGH QUALITY</h3>
-
-                <p class="about-card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, magni.</p>
-            </div>
-
-            <div class="about-card">
-                <button class="about-card-btn">
-                    <img src="./images/bean.png" alt="coffee bean" width="20">
-                </button>
-
-                <h3 class="about-card-header">PURE GRADES</h3>
-
-                <p class="about-card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, magni.</p>
-            </div>
-
-            <div class="about-card">
-                <button class="about-card-btn">
-                    <i class="fa-solid fa-mug-hot"></i>
-                </button>
-
-                <h3 class="about-card-header">PROPER ROASTING</h3>
-
-                <p class="about-card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, magni.</p>
-            </div>
-        </div>
-
-        <div class="about-box2">
-            <div class="about-left">
-                <img class="about-img" src="./images/about_us_img.jpg" alt="about us">
-            </div>
-
-            <div class="about-right">
-                <h1 class="header">About Us</h1>
-
-                <p class="description">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere officiis nam error quae libero nulla nihil, eum ea aut recusandae rem iusto accusantium at ipsa corrupti dolor, harum ab est?
-                </p>
-            </div>
-        </div>
-    </section>
-
-
-    <section id="special-coffee" class="special-coffee">
-        <h1 class="header special-title">Special Coffee</h1>
-
-        <div class="slider-container">
-            <div class="special-container">
-                <div class="special-box1">
-                    <img class="special-img" src="./images/strawberry.png" alt="coffee 1">
-        
-                    <button class="home-btn special-btn">
-                        More Details
-                    </button>
-                </div>
-        
-                <div class="special-box2">
-                    <h1 class="active-text strawberry">Strawberry Coffee</h1>
-                    <h3>Green Tea Coffee</h3>
-                    <h3>Chocolate Coffee</h3>
-                </div>
-            </div>
-    
-            <div class="special-container">
-                <div class="special-box1">
-                    <img class="special-img" src="./images/green-tea.png" alt="coffee 1">
-        
-                    <button class="home-btn special-btn">
-                        More Details
-                    </button>
-                </div>
-        
-                <div class="special-box2">
-                    <h1>Strawberry Coffee</h1>
-                    <h3 class="active-text green-tea">Green Tea Coffee</h3>
-                    <h3>Chocolate Coffee</h3>
-                </div>
-            </div>
-    
-            <div class="special-container">
-                <div class="special-box1">
-                    <img class="special-img" src="./images/chocolate.png" alt="coffee 1">
-        
-                    <button class="home-btn special-btn">
-                        More Details
-                    </button>
-                </div>
-        
-                <div class="special-box2">
-                    <h1>Strawberry Coffee</h1>
-                    <h3>Green Tea Coffee</h3>
-                    <h3 class="active-text chocolate">Chocolate Coffee</h3>
-                </div>
-            </div>
-
-            <button id="prev-btn" class="slider-btn">
-                <i class="fa-solid fa-angle-left"></i>
-            </button>
-            <button id="next-btn" class="slider-btn">
-                <i class="fa-solid fa-angle-right"></i>
-            </button>
-        </div>
-
-    </section>
-
-    <section id="menu" class="menu">
-        <h1 class="header menu-title">Menu</h1>
-
-        <div class="menu-container" id="menu-container"></div>
-    </section>
-
-    <section id="subscription" class="subscription">
-        <div class="subscription-box1">
-            <img class="subscription-img" src="./images/subscription.webp" alt="subscription">
-        </div>
-
-        <div class="subscription-box2">
-            <div class="subscription-container">
-                <h1 class="subscription-title">Subscribe!</h1>
-                <p class="subscription-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, maxime!</p>
-    
-                <input class="subscription-input" type="text" placeholder="Enter your name">
-                <input  class="subscription-input" type="text" placeholder="Enter your email">
-                <button class="subscription-btn">
-                    Send
-                </button>
-            </div>
-        </div>
-    </section>
-
-    <section id="footer" class="footer">
-        <div class="footer-box1">
-            <h1 class="footer-title">COME ON IN!</h1>
-
-            <div>
-                <h3 class="footer-subtitle">WEEKDAYS</h3>
-                <p class="footer-description">08AM-10PM</p>
-            </div>
-
-            <div>
-                <h3 class="footer-subtitle">WEEKENDS</h3>
-                <p class="footer-description">10AM-11PM</p>
-            </div>
-
-            <a href="#menu" class="home-btn footer-btn">
-                VIEW THE MENU
-            </a>
-        </div>
-
-        <div class="footer-box2">
-            <h1 class="footer-title">CONTACT</h1>
-
-            <div>
-                <h3 class="footer-subtitle">PHONE</h3>
-                <p class="footer-description">09123456789</p>
-            </div>
-
-            <div>
-                <h3 class="footer-subtitle">MAIL</h3>
-                <p class="footer-description">beanboutique@gmail.com</p>
-            </div>
-
-            <div>
-                <h3 class="footer-subtitle">ADDRESS</h3>
-                <p class="footer-description">Mandalay</p>
-            </div>
-        </div>
-    </section>
-
+    <script src="/script.js"></script>
     <script src="https://kit.fontawesome.com/1c7346f4a7.js" crossorigin="anonymous"></script>
-    <script src="./script.js"></script>
 </body>
 </html>

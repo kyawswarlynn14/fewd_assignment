@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Cart</title>
+		<link rel="stylesheet" href="/styles.css" />
+	</head>
+	<body class="container">
+        <div id="navbar" class="nav-bar"></div>
+
+        <section id="cart" class="cart">
+            <div class="cart-container">
+                <div class="item">
+                    <div class="cart-item">
+                        <img
+                            src="/images/cappuccino.jpg"
+                            alt="cappuccino"
+                            class="cart-img"
+                        />
+                        <div class="cart-box">
+                            <h3>Cappuccino</h3>
+                            <p>2</p>
+                            <p>Price: $11.5</p>
+                        </div>
+                    </div>
+    
+                    <p className="text-lg font-semibold">
+                        $23.0
+                    </p>
+                </div>
+    
+                <div class="item">
+                    <div class="cart-item">
+                        <img
+                            src="/images/mocha.jpg"
+                            alt="Mocha"
+                            class="cart-img"
+                        />
+                        <div class="cart-box">
+                            <h3>Mocha</h3>
+                            <p>1</p>
+                            <p>Price: $12.0</p>
+                        </div>
+                    </div>
+    
+                    <p className="text-lg font-semibold">
+                        $12.0
+                    </p>
+                </div>
+    
+                <div class="item">
+                    <div class="cart-item">
+                        <img
+                            src="/images/coldbrew.jpg"
+                            alt="Cold Brew"
+                            class="cart-img"
+                        />
+                        <div class="cart-box">
+                            <h3>Cold Brew</h3>
+                            <p>3</p>
+                            <p>Price: $10.0</p>
+                        </div>
+                    </div>
+    
+                    <p className="text-lg font-semibold">
+                        $30.0
+                    </p>
+                </div>
+            </div>
+    
+            <h2 class="total-price">Total: $65.0</h2>
+    
+            <button class="home-btn proceed-btn">
+                Proceed to Payment
+            </button>
+        </section>
+
+        <div id="footer"></div>
+
+        <script src="/script.js"></script>
+        <script
+			src="https://kit.fontawesome.com/1c7346f4a7.js"
+			crossorigin="anonymous"
+		></script>
+	</body>
+</html>

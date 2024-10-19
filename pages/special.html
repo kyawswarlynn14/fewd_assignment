@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Special Coffee</title>
+		<link rel="stylesheet" href="../styles.css" />
+	</head>
+	<body class="container">
+        <div id="navbar" class="nav-bar"></div>
+		<section id="special-coffee" class="special-coffee">
+			<!-- <h1 class="header special-title">Special Coffee</h1> -->
+
+			<div class="slider-container">
+				<div class="special-container">
+					<div class="special-box1">
+						<img
+							class="special-img"
+							src="../images/strawberry.png"
+							alt="coffee 1"
+						/>
+
+						<button class="home-btn special-btn">More Details</button>
+					</div>
+
+					<div class="special-box2">
+						<h1 class="active-text strawberry">Strawberry Coffee</h1>
+						<h3>Green Tea Coffee</h3>
+						<h3>Chocolate Coffee</h3>
+					</div>
+				</div>
+
+				<div class="special-container">
+					<div class="special-box1">
+						<img
+							class="special-img"
+							src="../images/green-tea.png"
+							alt="coffee 1"
+						/>
+
+						<button class="home-btn special-btn">More Details</button>
+					</div>
+
+					<div class="special-box2">
+						<h1>Strawberry Coffee</h1>
+						<h3 class="active-text green-tea">Green Tea Coffee</h3>
+						<h3>Chocolate Coffee</h3>
+					</div>
+				</div>
+
+				<div class="special-container">
+					<div class="special-box1">
+						<img
+							class="special-img"
+							src="../images/chocolate.png"
+							alt="coffee 1"
+						/>
+
+						<button class="home-btn special-btn">More Details</button>
+					</div>
+
+					<div class="special-box2">
+						<h1>Strawberry Coffee</h1>
+						<h3>Green Tea Coffee</h3>
+						<h3 class="active-text chocolate">Chocolate Coffee</h3>
+					</div>
+				</div>
+
+				<button id="prev-btn" class="slider-btn">
+					<i class="fa-solid fa-angle-left"></i>
+				</button>
+				<button id="next-btn" class="slider-btn">
+					<i class="fa-solid fa-angle-right"></i>
+				</button>
+			</div>
+		</section>
+
+        <div id="footer"></div>
+
+        <script src="/script.js"></script>
+
+		<script
+			src="https://kit.fontawesome.com/1c7346f4a7.js"
+			crossorigin="anonymous"
+		></script>
+
+		<script>
+			const sliderContainer = document.querySelector(".slider-container");
+			const slides = document.querySelectorAll(".special-container");
+			const prevBtn = document.getElementById("prev-btn");
+			const nextBtn = document.getElementById("next-btn");
+
+			let currentIndex = 0;
+			const totalSlides = slides.length;
+
+			function updateSlidePosition() {
+				for (let i = 0; i < totalSlides; i++) {
+					if (i !== currentIndex) {
+						slides[i].style.display = "none";
+					} else {
+						slides[i].style.display = "flex";
+					}
+				}
+			}
+
+			updateSlidePosition();
+
+			nextBtn.addEventListener("click", () => {
+				if (currentIndex < totalSlides - 1) {
+					currentIndex++;
+				} else {
+					currentIndex = 0;
+				}
+				updateSlidePosition();
+			});
+
+			prevBtn.addEventListener("click", () => {
+				if (currentIndex > 0) {
+					currentIndex--;
+				} else {
+					currentIndex = totalSlides - 1;
+				}
+				updateSlidePosition();
+			});
+		</script>
+	</body>
+</html>
