@@ -3,11 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Subscription</title>
-    <link rel="stylesheet" href="../styles.css">
+    <title>Bean Boutique - Subscription</title>
+    <link rel="icon" href="../images/logo.png">
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body class="container">
-    <div id="navbar" class="nav-bar"></div>
+    <nav id="navbar" class="nav-bar">
+        <img class="logo" src="../images/logo.png" alt="logo" />
+        <div class="nav-btn-gp">
+            <a href="../index.html" class="nav-btn">Home</a>
+            <a href="./about.html" class="nav-btn">About us</a>
+            <a href="./special.html" class="nav-btn">Coffee</a>
+            <a href="./menu.html" class="nav-btn">Menu</a>
+            <a href="./subscription.html" class="nav-btn">Subscribe</a>
+        </div>
+        <a href="./cart.html" class="cart-btn">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="badge">3</span>
+        </a>
+
+        <button class="hamburger" id="hamburger">
+            <i class="fa fa-bars"></i>
+        </button>
+    </nav>
 
     <section id="subscription" class="subscription">
         <div class="subscription-box1">
@@ -30,10 +48,46 @@
         </div>
     </section>
 
-    <div id="footer"></div>
+    <section class="footer">
+        <div class="footer-box1">
+            <h1 class="footer-title">COME ON IN!</h1>
 
-    <script src="/script.js"></script>
+            <div>
+                <h3 class="footer-subtitle">WEEKDAYS</h3>
+                <p class="footer-description">08AM-10PM</p>
+            </div>
 
+            <div>
+                <h3 class="footer-subtitle">WEEKENDS</h3>
+                <p class="footer-description">10AM-11PM</p>
+            </div>
+
+            <a href="./menu.html" class="home-btn footer-btn">
+                VIEW THE MENU
+            </a>
+        </div>
+
+        <div class="footer-box2">
+            <h1 class="footer-title">CONTACT</h1>
+
+            <div>
+                <h3 class="footer-subtitle">PHONE</h3>
+                <p class="footer-description">09123456789</p>
+            </div>
+
+            <div>
+                <h3 class="footer-subtitle">MAIL</h3>
+                <p class="footer-description">ksl@gmail.com</p>
+            </div>
+
+            <div>
+                <h3 class="footer-subtitle">ADDRESS</h3>
+                <p class="footer-description">Mandalay</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="../script/script.js"></script>
     <script src="https://kit.fontawesome.com/1c7346f4a7.js" crossorigin="anonymous"></script>
 </body>
 </html>

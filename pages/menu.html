@@ -3,121 +3,77 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Menu</title>
-		<link rel="stylesheet" href="../styles.css" />
+		<title>Bean Boutique - Menu</title>
+    	<link rel="icon" href="../images/logo.png">
+		<link rel="stylesheet" href="../css/styles.css" />
 	</head>
 	<body class="container">
-        <div id="navbar" class="nav-bar"></div>
+        <nav id="navbar" class="nav-bar">
+			<img class="logo" src="../images/logo.png" alt="logo" />
+			<div class="nav-btn-gp">
+				<a href="../index.html" class="nav-btn">Home</a>
+				<a href="./about.html" class="nav-btn">About us</a>
+				<a href="./special.html" class="nav-btn">Coffee</a>
+				<a href="./menu.html" class="nav-btn">Menu</a>
+				<a href="./subscription.html" class="nav-btn">Subscribe</a>
+			</div>
+			<a href="./cart.html" class="cart-btn">
+				<i class="fa-solid fa-cart-shopping"></i>
+				<span class="badge">3</span>
+			</a>
+	
+			<button class="hamburger" id="hamburger">
+				<i class="fa fa-bars"></i>
+			</button>
+		</nav>
 
 		<section id="menu" class="menu">
-			<!-- <h1 class="header menu-title">Menu</h1> -->
-
 			<div class="menu-container" id="menu-container"></div>
 		</section>
 
-        <div id="footer"></div>
+        <section class="footer">
+			<div class="footer-box1">
+				<h1 class="footer-title">COME ON IN!</h1>
+	
+				<div>
+					<h3 class="footer-subtitle">WEEKDAYS</h3>
+					<p class="footer-description">08AM-10PM</p>
+				</div>
+	
+				<div>
+					<h3 class="footer-subtitle">WEEKENDS</h3>
+					<p class="footer-description">10AM-11PM</p>
+				</div>
+	
+				<a href="./menu.html" class="home-btn footer-btn">
+					VIEW THE MENU
+				</a>
+			</div>
+	
+			<div class="footer-box2">
+				<h1 class="footer-title">CONTACT</h1>
+	
+				<div>
+					<h3 class="footer-subtitle">PHONE</h3>
+					<p class="footer-description">09123456789</p>
+				</div>
+	
+				<div>
+					<h3 class="footer-subtitle">MAIL</h3>
+					<p class="footer-description">ksl@gmail.com</p>
+				</div>
+	
+				<div>
+					<h3 class="footer-subtitle">ADDRESS</h3>
+					<p class="footer-description">Mandalay</p>
+				</div>
+			</div>
+		</section>
 
-        <script src="/script.js"></script>
+        <script src="../script/script.js"></script>
 		<script
 			src="https://kit.fontawesome.com/1c7346f4a7.js"
 			crossorigin="anonymous"
 		></script>
-		<script>
-			const menuItems = [
-				{
-					title: "Espresso",
-					description:
-						"A concentrated coffee brewed by forcing hot water through finely-ground coffee beans.",
-					imgSrc: "../images/espresso.jpg",
-					price: 9.9,
-				},
-				{
-					title: "Cappuccino",
-					description:
-						"A popular espresso-based drink with steamed milk and foam.",
-					imgSrc: "../images/cappuccino.jpg",
-					price: 11.5,
-				},
-				{
-					title: "Latte",
-					description:
-						"A smooth espresso drink with steamed milk and a thin layer of foam.",
-					imgSrc: "../images/latte.jpg",
-					price: 10.5,
-				},
-				{
-					title: "Mocha",
-					description:
-						"A latte combined with chocolate syrup, topped with whipped cream.",
-					imgSrc: "../images/mocha.jpg",
-					price: 12.0,
-				},
-				{
-					title: "Americano",
-					description:
-						"Espresso diluted with hot water, similar strength to drip coffee.",
-					imgSrc: "../images/americano.webp",
-					price: 8.9,
-				},
-				{
-					title: "Flat White",
-					description:
-						"Espresso with microfoam for a smooth and silky texture.",
-					imgSrc: "../images/flatwhite.jpg",
-					price: 11.0,
-				},
-				{
-					title: "Cold Brew",
-					description:
-						"Coffee steeped in cold water for a smooth, low-acid flavor.",
-					imgSrc: "../images/coldbrew.jpg",
-					price: 10.0,
-				},
-				{
-					title: "Macchiato",
-					description:
-						"A shot of espresso with a small amount of steamed milk or foam.",
-					imgSrc: "../images/macchiato.jpg",
-					price: 9.5,
-				},
-				{
-					title: "Iced Coffee",
-					description: "Regular brewed coffee served and chilled over ice.",
-					imgSrc: "../images/icedcoffee.jpg",
-					price: 8.5,
-				},
-				{
-					title: "Chai Latte",
-					description:
-						"Spiced black tea combined with steamed milk and sweetener.",
-					imgSrc: "../images/chailatte.webp",
-					price: 10.8,
-				},
-			];
-
-			function createMenuCards() {
-				const menuContainer = document.getElementById("menu-container");
-
-				menuItems.forEach((item) => {
-					const menuCard = document.createElement("div");
-					menuCard.classList.add("menu-card");
-
-					menuCard.innerHTML = `
-            <img class="menu-img" src="${item.imgSrc}" alt="${item.title}">
-            <h2 class="menu-card-title">${item.title}</h2>
-            <p class="menu-card-description">${item.description}</p>
-            <div class="price-box">
-                <span>Price: ${item.price}$</span>
-                <button class="add">
-                    <i class="fa-solid fa-circle-plus"></i>
-                </button>
-            </div>
-        `;
-					menuContainer.appendChild(menuCard);
-				});
-			}
-
-			window.onload = createMenuCards;
-		</script>
 	</body>
 </html>
