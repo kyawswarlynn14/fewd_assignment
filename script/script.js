@@ -20,6 +20,39 @@ navLinks.forEach((link) => {
 	}
 });
 
+// modal
+const isFirstVisit = !sessionStorage.getItem("visited");
+const welcomeModal = document.getElementById("welcomeModal");
+const closeBtn = document.querySelector(".close-btn");
+
+try {
+	if (isFirstVisit) {
+		welcomeModal.style.display = "block";
+		sessionStorage.setItem("visited", "true");
+	}
+	
+	closeBtn.addEventListener("click", () => {
+		welcomeModal.style.display = "none";
+	});
+	
+	window.addEventListener("click", (event) => {
+		if (event.target === welcomeModal) {
+			welcomeModal.style.display = "none";
+		}
+	});
+	
+	document.getElementById("emailSignupForm").addEventListener("submit", (event) => {
+		event.preventDefault();
+		const email = event.target.querySelector("input[type='email']").value;
+		console.log("Email for discount signup:", email);
+		welcomeModal.style.display = "none";
+		alert("Thank you for signing up! A discount will be applied to your first purchase.");
+	});
+} catch (err) {
+	console.log("modal err >>", err)
+}
+
+
 // menu
 
 const menuItems = [
@@ -88,6 +121,18 @@ const menuItems = [
 		imgSrc: "../images/chailatte.webp",
 		price: 10.8,
 	},
+	{
+		title: "Affogato",
+		description: "A scoop of vanilla ice cream topped with a shot of hot espresso.",
+		imgSrc: "../images/affogato.jpg",
+		price: 13.5,
+	},
+	{
+		title: "Irish Coffee",
+		description: "Coffee mixed with Irish whiskey, sugar, and topped with whipped cream.",
+		imgSrc: "../images/irishcoffee.jpeg",
+		price: 15.0,
+	},
 ];
 
 function createMenuCards() {
@@ -111,8 +156,11 @@ function createMenuCards() {
 		menuContainer.appendChild(menuCard);
 	});
 }
-
-window.onload = createMenuCards;
+try {
+	createMenuCards();
+} catch (err) {
+	console.log("menu err >>", err)
+}
 
 // special
 
@@ -134,31 +182,35 @@ function updateSlidePosition() {
 	}
 }
 
-updateSlidePosition();
-
-nextBtn.addEventListener("click", () => {
-	if (currentIndex < totalSlides - 1) {
-		currentIndex++;
-	} else {
-		currentIndex = 0;
-	}
+try {
 	updateSlidePosition();
-});
-
-prevBtn.addEventListener("click", () => {
-	if (currentIndex > 0) {
-		currentIndex--;
-	} else {
-		currentIndex = totalSlides - 1;
-	}
-	updateSlidePosition();
-});
-
-setInterval(() => {
-    if (currentIndex < totalSlides - 1) {
-        currentIndex++;
-    } else {
-        currentIndex = 0;
-    }
-    updateSlidePosition();
-}, 5000);
+	
+	nextBtn.addEventListener("click", () => {
+		if (currentIndex < totalSlides - 1) {
+			currentIndex++;
+		} else {
+			currentIndex = 0;
+		}
+		updateSlidePosition();
+	});
+	
+	prevBtn.addEventListener("click", () => {
+		if (currentIndex > 0) {
+			currentIndex--;
+		} else {
+			currentIndex = totalSlides - 1;
+		}
+		updateSlidePosition();
+	});
+	
+	setInterval(() => {
+		if (currentIndex < totalSlides - 1) {
+			currentIndex++;
+		} else {
+			currentIndex = 0;
+		}
+		updateSlidePosition();
+	}, 5000);
+} catch (err) {
+	console.log("special err >>", err)
+}
