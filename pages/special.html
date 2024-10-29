@@ -9,7 +9,7 @@
 	</head>
 	<body class="container">
         <nav id="navbar" class="nav-bar">
-			<img class="logo" src="../images/logo.png" alt="logo" />
+			<img class="logo" src="../images/logo.png" alt="logo" >
 			<div class="nav-btn-gp">
 				<a href="../index.html" class="nav-btn">Home</a>
 				<a href="./about.html" class="nav-btn">About</a>
@@ -28,68 +28,65 @@
 		</nav>
 
 		<section id="special-coffee" class="special-coffee">
-			<div class="slider-container">
-				<div class="special-container">
-					<div class="special-box1">
-						<img
-							class="special-img"
-							src="../images/strawberry.png"
-							alt="coffee 1"
-						/>
-
-						<button class="home-btn special-btn">More Details</button>
+			<swiper-container class="mySwiper" pagination="true" pagination-clickable="true" navigation="true" space-between="30" loop="true">
+				<swiper-slide>
+					<div class="special-container">
+						<div class="special-box1">
+							<img
+								class="special-img"
+								src="../images/strawberry.png"
+								alt="coffee 1"
+							>
+		
+							<button class="home-btn special-btn">More Details</button>
+						</div>
+		
+						<div class="special-box2">
+							<h1 class="active-text strawberry">Strawberry Coffee</h1>
+							<h3>Green Tea Coffee</h3>
+							<h3>Chocolate Coffee</h3>
+						</div>
 					</div>
-
-					<div class="special-box2">
-						<h1 class="active-text strawberry">Strawberry Coffee</h1>
-						<h3>Green Tea Coffee</h3>
-						<h3>Chocolate Coffee</h3>
+				</swiper-slide>
+				<swiper-slide>
+					<div class="special-container">
+						<div class="special-box1">
+							<img
+								class="special-img"
+								src="../images/green-tea.png"
+								alt="coffee 1"
+							>
+		
+							<button class="home-btn special-btn">More Details</button>
+						</div>
+		
+						<div class="special-box2">
+							<h1>Strawberry Coffee</h1>
+							<h3 class="active-text green-tea">Green Tea Coffee</h3>
+							<h3>Chocolate Coffee</h3>
+						</div>
 					</div>
-				</div>
-
-				<div class="special-container">
-					<div class="special-box1">
-						<img
-							class="special-img"
-							src="../images/green-tea.png"
-							alt="coffee 1"
-						/>
-
-						<button class="home-btn special-btn">More Details</button>
+				</swiper-slide>
+				<swiper-slide>
+					<div class="special-container">
+						<div class="special-box1">
+							<img
+								class="special-img"
+								src="../images/chocolate.png"
+								alt="coffee 1"
+							>
+		
+							<button class="home-btn special-btn">More Details</button>
+						</div>
+		
+						<div class="special-box2">
+							<h1>Strawberry Coffee</h1>
+							<h3>Green Tea Coffee</h3>
+							<h3 class="active-text chocolate">Chocolate Coffee</h3>
+						</div>
 					</div>
-
-					<div class="special-box2">
-						<h1>Strawberry Coffee</h1>
-						<h3 class="active-text green-tea">Green Tea Coffee</h3>
-						<h3>Chocolate Coffee</h3>
-					</div>
-				</div>
-
-				<div class="special-container">
-					<div class="special-box1">
-						<img
-							class="special-img"
-							src="../images/chocolate.png"
-							alt="coffee 1"
-						/>
-
-						<button class="home-btn special-btn">More Details</button>
-					</div>
-
-					<div class="special-box2">
-						<h1>Strawberry Coffee</h1>
-						<h3>Green Tea Coffee</h3>
-						<h3 class="active-text chocolate">Chocolate Coffee</h3>
-					</div>
-				</div>
-
-				<button id="prev-btn" class="slider-btn">
-					<i class="fa-solid fa-angle-left"></i>
-				</button>
-				<button id="next-btn" class="slider-btn">
-					<i class="fa-solid fa-angle-right"></i>
-				</button>
-			</div>
+				</swiper-slide>
+			</swiper-container>
 		</section>
 
         <section class="footer">
@@ -144,6 +141,7 @@
 		</section>
 
         <script src="../script/script.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
 
 		<script
 			src="https://kit.fontawesome.com/1c7346f4a7.js"
