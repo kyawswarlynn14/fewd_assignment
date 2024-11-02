@@ -161,3 +161,31 @@ try {
 } catch (err) {
 	console.log("menu err >>", err)
 }
+
+
+// event
+function showRegistrationForm(eventName) {
+    document.getElementById('registration-modal').style.display = 'flex';
+    document.getElementById('event-name').value = eventName;
+}
+
+function closeRegistrationForm() {
+    document.getElementById('registration-modal').style.display = 'none';
+}
+
+function registerForEvent(event) {
+    event.preventDefault();
+    
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const eventName = document.getElementById('event-name').value;
+
+    alert(`Thank you, ${name}! You are registered for ${eventName}.`);
+
+    document.getElementById('registration-form').reset();
+    closeRegistrationForm();
+}
+
+function subscribe(planName) {
+    alert(`Thank you for choosing the ${planName}! Your subscription has been activated.`);
+}

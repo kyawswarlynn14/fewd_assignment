@@ -11,13 +11,14 @@
     <nav id="navbar" class="nav-bar">
         <img class="logo" src="./images/logo.png" alt="logo">
         <div class="nav-btn-gp">
-            <a href="./index.html" class="nav-btn">Home</a>
-            <a href="./pages/about.html" class="nav-btn">About</a>
-            <a href="./pages/special.html" class="nav-btn">Coffee</a>
-            <a href="./pages/menu.html" class="nav-btn">Menu</a>
-            <a href="./pages/subscription.html" class="nav-btn">Subscribe</a>
+            <a href="./index.html" tabindex="1" accesskey="h" class="nav-btn">Home</a>
+            <a href="./pages/about.html" tabindex="2" accesskey="a" class="nav-btn">About</a>
+            <a href="./pages/special.html" tabindex="3" accesskey="s" class="nav-btn">Special</a>
+            <a href="./pages/menu.html" tabindex="4" accesskey="m" class="nav-btn">Menu</a>
+            <a href="./pages/event.html" tabindex="5" accesskey="e" class="nav-btn">Event</a>
+            <a href="./pages/equipment.html" tabindex="6" accesskey="b" class="nav-btn">Equipment</a>
         </div>
-        <a href="./pages/cart.html" class="cart-btn">
+        <a href="./pages/cart.html" tabindex="7" accesskey="p" class="cart-btn">
             <i class="fa-solid fa-cart-shopping"></i>
             <span class="badge">3</span>
         </a>
@@ -49,6 +50,27 @@
     <section class="map-container">
         <h1 class="header">Social Feed</h1>
         <iframe src="https://www.juicer.io/api/feeds/https-www-youtube-com-relaxjazzcafe1990/iframe"  class="social-feed"></iframe>
+    </section>
+
+    <section id="subscription" class="subscription">
+        <div class="subscription-box1">
+            <img class="subscription-img" src="./images/subscription.webp" alt="subscription">
+        </div>
+
+        <div class="subscription-box2">
+            <form id="demo-form" class="subscription-container">
+                <h1 class="subscription-title">Subscribe!</h1>
+                <p class="subscription-description">
+                    Join our community and be the first to know about our latest coffee blends, exclusive offers, and special events. Subscribe today and enjoy a premium coffee experience like never before.
+                </p>
+    
+                <input class="subscription-input" type="text" placeholder="Enter your name">
+                <input  class="subscription-input" type="text" placeholder="Enter your email">
+                <button class="subscription-btn">
+                    Send
+                </button>
+            </form>
+        </div>
     </section>
 
     <section class="footer">

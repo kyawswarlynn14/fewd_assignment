@@ -11,13 +11,14 @@
         <nav id="navbar" class="nav-bar">
 			<img class="logo" src="../images/logo.png" alt="logo" >
 			<div class="nav-btn-gp">
-				<a href="../index.html" class="nav-btn">Home</a>
-				<a href="./about.html" class="nav-btn">About</a>
-				<a href="./special.html" class="nav-btn">Coffee</a>
-				<a href="./menu.html" class="nav-btn">Menu</a>
-				<a href="./subscription.html" class="nav-btn">Subscribe</a>
+				<a href="../index.html" tabindex="1" accesskey="h" class="nav-btn">Home</a>
+				<a href="./about.html" tabindex="2" accesskey="a" class="nav-btn">About</a>
+				<a href="./special.html" tabindex="3" accesskey="s" class="nav-btn">Special</a>
+				<a href="./menu.html" tabindex="4" accesskey="m" class="nav-btn">Menu</a>
+				<a href="./event.html" tabindex="5" accesskey="e" class="nav-btn">Event</a>
+				<a href="./equipment.html" tabindex="6" accesskey="s" class="nav-btn">Equipment</a>
 			</div>
-			<a href="./cart.html" class="cart-btn">
+			<a href="./cart.html" tabindex="7" accesskey="p" class="cart-btn">
 				<i class="fa-solid fa-cart-shopping"></i>
 				<span class="badge">3</span>
 			</a>
@@ -38,7 +39,7 @@
 								alt="coffee 1"
 							>
 		
-							<button class="home-btn special-btn">More Details</button>
+							<button class="home-btn special-btn">15% Off first Subscription</button>
 						</div>
 		
 						<div class="special-box2">
@@ -57,7 +58,7 @@
 								alt="coffee 1"
 							>
 		
-							<button class="home-btn special-btn">More Details</button>
+							<button class="home-btn special-btn">Free Shipping</button>
 						</div>
 		
 						<div class="special-box2">
@@ -76,7 +77,7 @@
 								alt="coffee 1"
 							>
 		
-							<button class="home-btn special-btn">More Details</button>
+							<button class="home-btn special-btn">20% Off first Subscription</button>
 						</div>
 		
 						<div class="special-box2">
@@ -89,7 +90,37 @@
 			</swiper-container>
 		</section>
 
-        <section class="footer">
+		<section class="subscriptions">
+			<h2 class="header">Subscription Plans</h2>
+			<div class="subscriptions-container">
+				<div class="sub-card basic">
+					<h3 class="about-card-header sub-card-title">Basic Plan</h3>
+					<p class="about-card-description">Monthly delivery of one bag of coffee. Perfect for casual coffee drinkers.</p>
+					<p class="about-card-description"><strong>Price:</strong> $15/month</p>
+					<div class="event-btn-container">
+						<button class="sub-card-btn" onclick="subscribe('Basic Plan')">Subscribe</button>
+					</div>
+				</div>
+				<div class="sub-card premium">
+					<h3 class="about-card-header sub-card-title">Premium Plan</h3>
+					<p class="about-card-description">Two bags of coffee per month with access to exclusive flavors.</p>
+					<p class="about-card-description"><strong>Price:</strong> $28/month</p>
+					<div class="event-btn-container">
+						<button class="sub-card-btn" onclick="subscribe('Premium Plan')">Subscribe</button>
+					</div>
+				</div>
+				<div class="sub-card deluxe">
+					<h3 class="about-card-header sub-card-title">Deluxe Plan</h3>
+					<p class="about-card-description">Weekly delivery with priority access to our newest blends and flavors.</p>
+					<p class="about-card-description"><strong>Price:</strong> $50/month</p>
+					<div class="event-btn-container">
+						<button class="sub-card-btn" onclick="subscribe('Deluxe Plan')">Subscribe</button>
+					</div>
+				</div>
+			</div>
+		</section>
+
+        <footer class="footer">
 			<div class="footer-box1">
 				<h1 class="footer-title">COME ON IN!</h1>
 	
@@ -138,7 +169,7 @@
 					<p class="footer-description">Mandalay</p>
 				</div>
 			</div>
-		</section>
+		</footer>
 
         <script src="../script/script.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
