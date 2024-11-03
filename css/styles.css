@@ -673,12 +673,12 @@ swiper-container {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 16px;
 }
 
 .event {
     position: relative;
-    width: 340px;
+    width: 320px;
     height: 280px;
     color: #fff;
     background-size: cover;
